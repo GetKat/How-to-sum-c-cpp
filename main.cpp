@@ -18,7 +18,7 @@ int main(){
 		exit(-1);
 	}
 
-	fprintf(f, "%s", s.c_str());
+	fputs(s.c_str(), f);
 	fclose(f);
 
 	system("gcc -std=c99 -o sumf sumfile.c");
