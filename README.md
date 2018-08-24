@@ -1,2 +1,2 @@
-# How-to-sum-c-c-
+# How-to-sum-c-cpp
 A proper way to sum two integers using c and c++ (yes, I used "and")
