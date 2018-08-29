@@ -5,7 +5,7 @@
 int main(){
 	char s[512] = "#include <stdio.h>\nint main(){ ", aux[12];
 	FILE *f;
-	int a, b, result;
+	int a, b, result, count = 0;
 
 	printf("Enter two integers: ");
 	scanf("%d %d", &a, &b);
@@ -26,10 +26,10 @@ int main(){
 		exit(-1);
 	}
 
-	fputs(s, f);
+	fwrite(s, strlen(s) * sizeof(char), 1, f);
 	fclose(f);
 
-	system("gcc -std=c99 -o sumf sumfile.c");
+	system("gcc -std=c99 -o sumf -w sumfile.c");
 	result = system("sumf");
 	
 	printf("Sum is %d\n", result);
